@@ -1,0 +1,12 @@
+# Core dependencies for the HE inference pilot
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+
+# Concrete ML — TFHE-based homomorphic inference (Zama)
+# This is the heaviest dependency and the one most likely to need
+# the Apple Silicon fallback. See docs/APPLE_SILICON.md if install fails.
+concrete-ml>=1.6.0
+
+# concrete-ml pulls torch in, but pin it explicitly for reproducibility
+torch>=2.0

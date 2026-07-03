@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.venv-x86/
+venv/
+
+# Data — do NOT commit the dataset (get it from Kaggle)
+creditcard.csv
+
+# Keep the results directory but not stray files
+.DS_Store
+
+# Concrete ML compilation artifacts
+*.zip
+.artifacts/

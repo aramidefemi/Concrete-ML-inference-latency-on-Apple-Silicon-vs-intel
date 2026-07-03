@@ -1,0 +1,2 @@
+# This file keeps the results/ directory in git.
+# Pilot output (pilot_*.json / pilot_*.csv) will appear here after you run src/run_pilot.py
