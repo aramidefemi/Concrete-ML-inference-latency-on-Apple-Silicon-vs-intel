@@ -1,0 +1,8 @@
+metric,value
+hostname,Olasubomis-MBP
+arch,apple_silicon
+cpu,Apple M5
+avx512,False
+plaintext_median_ms,0.964
+fhe_execute_median_ms,35235.789
+encryption_tax_x,36551.6

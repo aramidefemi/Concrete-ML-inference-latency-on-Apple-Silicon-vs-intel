@@ -73,8 +73,9 @@ def build_and_compile(X_train, y_train):
     import torch
 
     # Small feedforward net — shallow to keep multiplicative depth low for HE.
+    # 2 layers (not 3): 3-layer + 30 features exceeds TFHE parameter search on real ULB data.
     model = NeuralNetClassifier(
-        module__n_layers=3,
+        module__n_layers=2,
         module__n_w_bits=N_BITS,
         module__n_a_bits=N_BITS,
         module__n_hidden_neurons_multiplier=1,
@@ -92,7 +93,9 @@ def build_and_compile(X_train, y_train):
 
     print(f"[compile] Compiling to FHE (n_bits={N_BITS})...")
     t0 = time.perf_counter()
-    model.compile(X_train)
+    # Calibration subset is enough for range estimation and much faster than full X_train.
+    cal = X_train[: min(100, len(X_train))]
+    model.compile(cal)
     compile_s = time.perf_counter() - t0
     print(f"[compile] Done in {compile_s:.1f}s")
 
