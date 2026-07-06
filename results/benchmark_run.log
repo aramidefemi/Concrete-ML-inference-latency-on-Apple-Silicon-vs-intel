@@ -1,0 +1,34 @@
+============================================================
+HE INFERENCE PILOT
+============================================================
+Host: intel-mac.local | Arch: x86_64 | CPU: Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz
+Cores: 8 | RAM: 16.0GB | AVX512: False
+============================================================
+[data] Loaded real ULB dataset: 284807 rows, 30 features
+[train] Training feedforward classifier (plaintext)...
+[train] Done in 544.9s
+[compile] Compiling to FHE (n_bits=6)...
+[compile] Done in 14.6s
+[time] Running 10 real FHE-execute inferences (this is the slow part)...
+  run 1/10: 329792.5 ms
+  run 2/10: 303550.2 ms
+  run 3/10: 329467.7 ms
+  run 4/10: 271039.4 ms
+  run 5/10: 289116.6 ms
+  run 6/10: 390589.3 ms
+  run 7/10: 349883.4 ms
+  run 8/10: 356905.5 ms
+  run 9/10: 338310.7 ms
+  run 10/10: 439817.3 ms
+
+============================================================
+RESULT SUMMARY
+============================================================
+Plaintext median:     4.894 ms
+FHE-execute median:   334051.594 ms
+Encryption tax:       68257.4x slower than plaintext
+
+Written: /Users/mac/Desktop/projects/he-pilot/src/../results/pilot_intel-mac.local_x86_64.json
+Written: /Users/mac/Desktop/projects/he-pilot/src/../results/pilot_intel-mac.local_x86_64.csv
+
+Run this on BOTH machines, then run:  python src/compare.py

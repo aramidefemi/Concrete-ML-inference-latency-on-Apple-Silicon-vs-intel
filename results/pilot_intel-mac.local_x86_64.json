@@ -1,0 +1,45 @@
+{
+  "timestamp_utc": "2026-07-06T19:38:33.544388+00:00",
+  "data_source": "ULB_real",
+  "n_bits": 6,
+  "hardware": {
+    "hostname": "intel-mac.local",
+    "system": "Darwin",
+    "machine": "x86_64",
+    "arch_label": "x86_64",
+    "cpu_model": "Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz",
+    "physical_cores": 8,
+    "ram_gb": 16.0,
+    "is_apple_silicon": false,
+    "has_avx512": false,
+    "has_avx2": true,
+    "python_version": "3.11.6"
+  },
+  "train_seconds": 544.89,
+  "compile_seconds": 14.62,
+  "timings_ms": {
+    "plaintext": {
+      "median_ms": 4.894,
+      "mean_ms": 5.247,
+      "min_ms": 4.351,
+      "max_ms": 8.537,
+      "runs": 30
+    },
+    "fhe_simulate": {
+      "median_ms": 15.941,
+      "mean_ms": 16.285,
+      "min_ms": 14.673,
+      "max_ms": 20.848,
+      "runs": 10
+    },
+    "fhe_execute": {
+      "median_ms": 334051.594,
+      "mean_ms": 339847.253,
+      "min_ms": 271039.419,
+      "max_ms": 439817.308,
+      "runs": 10
+    }
+  },
+  "fhe_execute_median_ms": 334051.594,
+  "encryption_tax_x": 68257.4
+}

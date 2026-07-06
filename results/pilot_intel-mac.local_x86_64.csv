@@ -1,0 +1,8 @@
+metric,value
+hostname,intel-mac.local
+arch,x86_64
+cpu,Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz
+avx512,False
+plaintext_median_ms,4.894
+fhe_execute_median_ms,334051.594
+encryption_tax_x,68257.4
